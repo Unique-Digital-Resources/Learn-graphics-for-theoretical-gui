@@ -22,7 +22,7 @@ fn main() {
     
     // Create paint (the color/shader used to fill drawed shape) then create pixmap.
     // Draw the shape using rounded_corners_rectangle_draw_1 function on the pixmap. 
-    // Go to line 39 - 74 to understand how rounded_corners_rectangle_draw_1 works.
+    // Go to line 53 - 96 to understand how rounded_corners_rectangle_draw_1 works.
 
     //==============================================================================
 
@@ -52,6 +52,8 @@ fn main() {
 
 fn rounded_corners_rectangle_draw_1(x:f32,y:f32,w:f32,h:f32,mut r:f32) -> Path
 {
+    // x, y are shape position, w is width, h is height and r is cubic curve sides length.
+
     //  Set limits for r, such that the sides of the curves do not intersect each other.
     //==============================================================================
     if h>w{
