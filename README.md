@@ -53,3 +53,11 @@ In addition to the previous requirement, it requires skill, resourcefulness, and
 - The level of difficulty is based on my personal scale and does not necessarily have to be actually easy or difficult. It varies between one person and another.
 - Often the same algorithm can be used in a specific function with multiple libraries, meaning the code can be copied and used with another library, and the code can be changed as necessary to be compatible with the library.
 - It is possible to write advanced algorithm/code that based on algorithm/code that already exists in this repository.
+
+## Contributing
+
+Contributions are always welcome!
+
+See `contributing.md` for ways to get started.
+
+Please adhere to this project's `code of conduct`.
