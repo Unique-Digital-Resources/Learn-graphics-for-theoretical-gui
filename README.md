@@ -31,7 +31,7 @@ In addition to the previous requirement, it requires skill, resourcefulness, and
     - [x] Rounded rectangle (Difficult) 
     - [x] Simple pie chart (Difficult)
     - [x] Simple graph (Easy)
-    - [ ] Circular ends pie chart (Difficult) ![circular_ends_pie_chart](https://github.com/Unique-Digital-Resources/Examples-of-using-some-crates-for-rust-community/assets/144396669/60658a32-69a4-4b67-b872-b4aacdf740b4)
+    - [ ] [Circular ends pie chart](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/blob/main/roadmap_images/circular_ends_pie_chart.png) (Difficult)
 
     - [ ] Animation/Animated shapes in [winit](https://github.com/rust-windowing/winit) window and [softbuffer](https://github.com/rust-windowing/softbuffer) (Difficult)
     - [ ] Animation/Animated shapes in [winit](https://github.com/rust-windowing/winit) window and [pixels](https://github.com/parasyte/pixels/tree/main) (Difficult)
@@ -42,7 +42,7 @@ In addition to the previous requirement, it requires skill, resourcefulness, and
     - [ ] Rounded rectangle (Difficult) 
     - [ ] Simple pie chart (Difficult)
     - [ ] Simple graph (Easy)
-    - [ ] Circular ends pie chart (Difficult)![circular_ends_pie_chart](https://github.com/Unique-Digital-Resources/Examples-of-using-some-crates-for-rust-community/assets/144396669/60658a32-69a4-4b67-b872-b4aacdf740b4)
+    - [ ] [Circular ends pie chart](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/blob/main/roadmap_images/circular_ends_pie_chart.png) (Difficult)
     - [ ] Animation/Animated shapes in [winit](https://github.com/rust-windowing/winit) window and [softbuffer](https://github.com/rust-windowing/softbuffer) (Difficult)
     - [ ] Animation/Animated shapes in [winit](https://github.com/rust-windowing/winit) window and [pixels](https://github.com/parasyte/pixels/tree/main) (Difficult)
     - [ ] mouse hover on shape event in [winit](https://github.com/rust-windowing/winit) window and [softbuffer](https://github.com/rust-windowing/softbuffer) (Difficult)
