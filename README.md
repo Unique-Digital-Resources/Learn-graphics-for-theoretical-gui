@@ -60,4 +60,4 @@ Contributions are always welcome!
 
 See `contributing.md` for ways to get started.
 
-Please adhere to this project's `code of conduct`.
+Please adhere to this project's [code of conduct](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/blob/main/CODE_OF_CONDUCT.md#contributor-covenant-code-of-conduct).
