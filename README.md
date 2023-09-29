@@ -5,6 +5,12 @@
 
 Examples of GUI element graphics, written and illustrated with pictures to better understand the algorithm for drawing an element in the user interface.
 
+## the goal:
+The main goal of this repository is to help understand:
+- How to draw and paint every shape (especially in the graphical user interface) using libraries whose function is mainly graphics.
+- Dealing with the window management library to link graphics to events (mouse, keyboard, joystick, system events, etc.)
+- You can consider it as a challenge or training to improve your programming skills.
+
 
 ## Features
 
@@ -42,3 +48,8 @@ In addition to the previous requirement, it requires skill, resourcefulness, and
     - [ ] mouse hover on shape event in [winit](https://github.com/rust-windowing/winit) window and [softbuffer](https://github.com/rust-windowing/softbuffer) (Difficult)
     - [ ] mouse hover on shape event in [winit](https://github.com/rust-windowing/winit) window and [pixels](https://github.com/parasyte/pixels/tree/main) (Difficult)
 
+##### Notes on the roadmap:
+- You can suggest new goals or other libraries for graphics in the Issues section
+- The level of difficulty is based on my personal scale and does not necessarily have to be actually easy or difficult. It varies between one person and another.
+- Often the same algorithm can be used in a specific function with multiple libraries, meaning the code can be copied and used with another library, and the code can be changed as necessary to be compatible with the library.
+- It is possible to write advanced algorithm/code that based on algorithm/code that already exists in this repository.
