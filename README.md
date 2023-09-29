@@ -5,6 +5,11 @@
 
 Examples of GUI element graphics, written and illustrated with pictures to better understand the algorithm for drawing an element in the user interface.
 
+### note:
+- This project is a community project, meaning it depends on community participation to a large extent
+- This README.md file was written by [dillinger](https://dillinger.io) and [readme.so](https://readme.so).
+
+
 ## the goal:
 The main goal of this repository is to help understand:
 - How to draw and paint every shape (especially in the graphical user interface) using libraries whose function is mainly graphics.
