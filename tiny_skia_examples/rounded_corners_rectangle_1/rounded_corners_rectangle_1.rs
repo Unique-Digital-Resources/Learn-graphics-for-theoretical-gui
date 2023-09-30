@@ -22,7 +22,7 @@ fn main() {
     
     // Create paint (the color/shader used to fill drawed shape) then create pixmap.
     // Draw the shape using rounded_corners_rectangle_draw_1 function on the pixmap. 
-    // Go to line 53 - 96 to understand how rounded_corners_rectangle_draw_1 works.
+    // Go to line 53 - 95 to understand how rounded_corners_rectangle_draw_1 works.
 
     //==============================================================================
 
@@ -75,7 +75,6 @@ fn rounded_corners_rectangle_draw_1(x:f32,y:f32,w:f32,h:f32,mut r:f32) -> Path
 
 
     // Cubic curves used as corners of the rectangle.
-    // See 
     //==============================================================================
     let mut pb = PathBuilder::new();
     pb.move_to(x+r, y);
