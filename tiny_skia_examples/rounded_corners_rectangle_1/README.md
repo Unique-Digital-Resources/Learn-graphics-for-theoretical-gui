@@ -2,8 +2,7 @@
 To draw a rounded rectangle - which is used as a button widget in modern GUI - there are several ways Algorithms in order to do this.
 In this example we will use straight lines and cubic curves to do this with Tiny-Skia.
 In the file rounded_corners_rectangle_1.rs:
-    
-    ```rust
+```rust
     // x, y are shape position, w is width, h is height and r is cubic curve sides length.
     //  Set limits for r, such that the sides of the curves do not intersect each other.
     //==============================================================================
@@ -36,11 +35,15 @@ In the file rounded_corners_rectangle_1.rs:
     pb.line_to(x, y+r);
     pb.cubic_to(x,y+(r/2 as f32),x+(r/2 as f32),y, x+r, y);
     pb.close();
-    ```
+```
 The following image may explain how the code works:
 ![rounded_corners_rectangle_alogrithm](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/9f764f7d-fa19-4e67-aa03-235d149ba353)
 
-When we put the values ​​w=800, h=500, and r=60 in the function ```rounded_corners_rectangle_draw_1(x:f32,y:f32,w:f32,h:f32,mut r:f32) -> Path```, we get the following form:
+When we put the values ​​w=800, h=500, and r=60 in the function 
+```rust 
+rounded_corners_rectangle_draw_1(x:f32,y:f32,w:f32,h:f32,mut r:f32) -> Path
+```
+, we get the following form:
 ![rounded_corners_rectangle_1_w800_h500_r60](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/e73cdcdf-540e-4652-82c7-1b390570b972)
 ​​
 w=800, h=500, and r=120:
