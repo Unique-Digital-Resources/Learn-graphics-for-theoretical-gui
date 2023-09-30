@@ -3,7 +3,7 @@ To draw a rounded rectangle - which is used as a button widget in modern GUI - t
 In this example we will use straight lines and cubic curves to do this with Tiny-Skia.
 In the file rounded_corners_rectangle_1.rs:
     
-    ```
+    ```rust
     // x, y are shape position, w is width, h is height and r is cubic curve sides length.
     //  Set limits for r, such that the sides of the curves do not intersect each other.
     //==============================================================================
