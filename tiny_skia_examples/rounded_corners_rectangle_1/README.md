@@ -24,7 +24,6 @@ In the file rounded_corners_rectangle_1.rs:
     }
     //==============================================================================
     // Cubic curves used as corners of the rectangle.
-    // See 
     //==============================================================================
     let mut pb = PathBuilder::new();
     pb.move_to(x+r, y);
