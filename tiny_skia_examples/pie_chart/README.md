@@ -130,6 +130,13 @@ if used_degree>=0.0 && used_degree<45.0 {
 ```
 For example: When we draw the first segment whose degree is 60, the following values are as follows:
 ```
-last_point_x = x, last_point_y = y-r, used_degree = 0.0
+last_point_x = x, last_point_y = y-r, used_degree = 0.0, degree = 60.0
+```
+In this case:
+```rust
+if used_degree>=0.0 && used_degree<45.0 {
+            if degree > 45.0 && degree <= 135.0{
+                pb.line_to(x+r , last_point_y );
+            }
 ```
 ![pie_chart_drawing_alogrithm_3](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/6352a74b-9dfc-4a30-8956-26c2eede9a54)
