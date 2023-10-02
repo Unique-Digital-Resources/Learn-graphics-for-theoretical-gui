@@ -1,5 +1,5 @@
 # Pie chart algorithm
-To draw a pie chart - which is used to represent date in circular sections- there are several ways Algorithms in order to do this.
+To draw a pie chart - which is used to represent data in circular sections- there are several ways Algorithms in order to do this.
 In this example we will use straight lines and mask to do this with Tiny-Skia.
 
 We have user defined inputs:
