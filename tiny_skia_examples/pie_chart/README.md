@@ -21,6 +21,116 @@ First, we draw a complete circle that serves as the background or the complement
         None
     );
 ```
+![piechart_bg](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/77642f9b-9254-4e58-aed0-d108eac77e69)
+
+
 Now we draw the pie, by drawing a square and dividing it into 8 equal parts, each part has an angle at the point (x, y) measuring 45 degrees.
 ![pie_chart_drawing_alogrithm_2](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/208a2a7f-6e77-4742-b105-4b99e0561b3d)
 
+A line will be drawn whose starting point is (x,y) and whose ending point is (last_point_x , last_point_y ).
+```rust
+        pb.move_to(x , y );
+        pb.line_to(last_point_x , last_point_y );
+```
+The ending point (last_point_x , last_point_y) is predetermined given the degree of the previous segment along with the degree of the current segment, and it will be on one of the sides of the square.
+```rust
+if degree > 0.0 && degree <= 45.0{
+            new_point_x = x + (r * (degree/45.0));
+            new_point_y = y-r
+        }
+        else if degree > 45.0 && degree <= 90.0 {
+           new_point_x = x+r;
+           new_point_y = y - (r * (90.0-degree )/45.0);
+        }
+        else if degree > 90.0 && degree <= 135.0{
+            new_point_x = x+r;
+            new_point_y = y + (r * (degree-90.0)/45.0 );
+        } 
+        else if degree > 135.0 && degree <= 180.0{
+            new_point_x = x+r - (r * (degree-135.0)/45.0 );
+            new_point_y = y+r;
+        } 
+        else if degree > 180.0 && degree <= 225.0 {
+            new_point_x = x - (r * (degree-180.0)/45.0 );
+            new_point_y = y+r;
+        }
+        else if  degree > 225.0 && degree <= 270.0{
+            new_point_x = x - r;
+            new_point_y = y+r - (r * (degree-225.0)/45.0 )
+        }
+        else if  degree > 270.0 && degree <= 315.0{
+            new_point_x = x- r;
+            new_point_y = y - (r * (degree-270.0)/45.0 );
+        }
+        else if  degree > 315.0 && degree <= 360.0{
+            new_point_x = x-r + (r * (degree-315.0)/45.0 );
+            new_point_y = y-r
+        }
+```
+Then we draw other lines to close the section of the square
+```rust
+if used_degree>=0.0 && used_degree<45.0 {
+            if degree > 45.0 && degree <= 135.0{
+                pb.line_to(x+r , last_point_y );
+            }
+            else if degree > 135.0 && degree <= 225.0{
+                pb.line_to(x+r , y-r );
+                pb.line_to(x+r , y+r );
+                pb.line_to(last_point_x , y+r );
+            }
+            else if degree > 225.0 && degree <= 315.0{
+                pb.line_to(x+r , y-r );
+                pb.line_to(x+r , y+r );
+                pb.line_to(x-r , y+r );
+                pb.line_to(x-r , last_point_y );
+            }
+            else if degree > 315.0 && degree <= 360.0{
+                pb.line_to(x+r , y-r );
+                pb.line_to(x+r , y+r );
+                pb.line_to(x-r , y+r );
+                pb.line_to(x-r , y-r );
+                pb.line_to(last_point_x , y-r );
+            }
+        }
+        else if  used_degree>=45.0 && used_degree<135.0 {
+            if degree > 135.0 && degree <= 225.0{
+                pb.line_to(x+r , y+r );
+                pb.line_to(last_point_x , y+r );
+            }
+            else if degree > 225.0 && degree <= 315.0{
+                pb.line_to(x+r , y+r );
+                pb.line_to(x-r , y+r );
+                pb.line_to(x-r , last_point_y );
+            }
+            else if degree > 315.0 && degree <= 360.0{
+                pb.line_to(x+r , y+r );
+                pb.line_to(x-r , y+r );
+                pb.line_to(x-r , y-r );
+                pb.line_to(last_point_x , y-r );
+            }
+        }
+        else if used_degree>=135.0 && used_degree<225.0 {
+            if degree > 225.0 && degree <= 315.0{
+                pb.line_to(x-r , y+r );
+                pb.line_to(x-r , last_point_y );
+            }
+            else if degree > 315.0 && degree <= 360.0{
+                pb.line_to(x-r , y+r );
+                pb.line_to(x-r , y-r );
+            }
+        }
+        else if  used_degree>=225.0 && used_degree<315.0{
+            if degree > 315.0 && degree <= 360.0{
+                pb.line_to(x-r , y+r );
+                pb.line_to(x-r , y-r );
+                pb.line_to(last_point_x , y-r );
+            }
+
+        }
+```
+For example: When we draw the first segment whose degree is 60, the following values are as follows:
+```
+![pie_chart_drawing_alogrithm_3](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/6352a74b-9dfc-4a30-8956-26c2eede9a54)
+
+last_point_x = x, last_point_y = y-r, used_degree = 0.0
+```
