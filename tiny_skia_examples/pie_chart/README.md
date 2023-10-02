@@ -146,3 +146,8 @@ if used_degree>=0.0 && used_degree<45.0 {
             }
 ```
 ![pie_chart_drawing_alogrithm_3](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/6352a74b-9dfc-4a30-8956-26c2eede9a54)
+
+The variables are then assigned values ​​that are used to plot the next section
+```
+last_point_x = new_point_x = x+r, last_point_y = new_point_y = y - (r * (90.0-degree )/45.0), used_degree = degree = 60.0
+```
