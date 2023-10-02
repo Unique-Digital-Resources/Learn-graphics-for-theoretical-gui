@@ -134,6 +134,12 @@ last_point_x = x, last_point_y = y-r, used_degree = 0.0, degree = 60.0
 ```
 In this case:
 ```rust
+        else if degree > 45.0 && degree <= 90.0 {
+           new_point_x = x+r;
+           new_point_y = y - (r * (90.0-degree )/45.0);
+        }
+```
+```rust
 if used_degree>=0.0 && used_degree<45.0 {
             if degree > 45.0 && degree <= 135.0{
                 pb.line_to(x+r , last_point_y );
