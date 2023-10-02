@@ -3,7 +3,7 @@ To draw a pie chart - which is used to represent date in circular sections- ther
 In this example we will use straight lines and mask to do this with Tiny-Skia.
 
 We have user defined inputs:
-x, y are the position of the pie chart, r is radius, pie_slices is represented data, full_pie is the total/full value, mask is mask layer, paint is shader/color in pixmap.
+x, y are the position of the pie chart, r is radius, pie_slices is represented data: (red, green, blue, alpha, value), full_pie is the total/full value, mask is mask layer, paint is shader/color in pixmap.
 
 First, we draw a complete circle that serves as the background or the complementary part of the pie chart if the total data is less than the full value full_pie
 ```rust
@@ -132,6 +132,9 @@ For example: When we draw the first segment whose degree is 60, the following va
 ```
 last_point_x = x, last_point_y = y-r, used_degree = 0.0, degree = 60.0
 ```
+Note : degree = 360.0 * (the value from pie_slices's item / full_pie ) + used_degree = 
+360.0 * (60.0 / 360.0) + 0.0 = 60
+, full_pie = 360.0
 In this case:
 ```rust
         else if degree > 45.0 && degree <= 90.0 {
@@ -151,3 +154,30 @@ The variables are then assigned values ​​that are used to plot the next sect
 ```
 last_point_x = new_point_x = x+r, last_point_y = new_point_y = y - (r * (90.0-degree )/45.0), used_degree = degree = 60.0
 ```
+
+When we draw the second segment whose degree is 95, the following values are as follows:
+```
+last_point_x = x+r, last_point_y = y - (r * (90.0-60.0 )/45.0), used_degree = 60.0,
+degree = 360.0 * (the value from pie_slices's item / full_pie ) + used_degree = 360.0 * (95.0 / 360) + 60.0 = 155.0
+```
+In this case:
+```rust
+        else if degree > 135.0 && degree <= 180.0{
+            new_point_x = x+r - (r * (degree-135.0)/45.0 );
+            new_point_y = y+r;
+        } 
+``````
+```rust
+        else if  used_degree>=45.0 && used_degree<135.0 {
+            if degree > 135.0 && degree <= 225.0{
+                pb.line_to(x+r , y+r );
+                pb.line_to(last_point_x , y+r );
+            }
+```
+![pie_chart_drawing_alogrithm_4](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/3491afd6-1cd0-4ba7-9f12-0ad840b0a8a3)
+
+The variables are then assigned values ​​that are used to plot the next section
+```
+last_point_x = new_point_x = x+r - (r * (degree-135.0)/45.0 ), last_point_y = new_point_y = y+r, used_degree = degree = 155.0
+```
+
