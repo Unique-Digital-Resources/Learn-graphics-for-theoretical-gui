@@ -212,3 +212,8 @@ let mut mpb = PathBuilder::new();
 We get the final output:
 
 ![piechart](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/5b3fada0-ccfe-4168-8f85-3c182e44a45b)
+
+
+## Usefull resources:
+- https://docs.rs/tiny-skia/latest/tiny_skia/ (tiny-skia docs).
+- https://github.com/RazrFalcon/tiny-skia/tree/master/examples (original examples).
