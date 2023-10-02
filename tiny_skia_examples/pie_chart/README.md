@@ -181,3 +181,34 @@ The variables are then assigned values ​​that are used to plot the next sect
 last_point_x = new_point_x = x+r - (r * (degree-135.0)/45.0 ), last_point_y = new_point_y = y+r, used_degree = degree = 155.0
 ```
 
+And so on.
+We will end up with this form:
+![piechart_square](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/2250bd15-03db-48e1-8e60-9568c509784d)
+We see that there is a missing part because the sum of the data values ​​is less than the full value specified by the user. The back circle will appear as if it is the missing part.
+
+Finally, we draw another circle that will be used as a mask to cut the square and turn it into a circle:
+```rust
+let mut mpb = PathBuilder::new();
+        mpb.push_circle(x , y , r );
+        let mut mpaint = Paint::default();
+        mpaint.set_color_rgba8(0, 0, 0, 255);
+        mpaint.anti_alias = true;
+        let path = pb.finish().unwrap();
+        let mpath = mpb.finish().unwrap();
+        mask.fill_path(&path, FillRule::EvenOdd, true, Transform::default());
+        mask.intersect_path(&mpath,FillRule::EvenOdd, true, Transform::default());
+```
+```rust
+        paint.set_color_rgba8(red as u8,green as u8, blue as u8, alpha as u8);
+        paint.anti_alias = true;
+        pixmap.fill_path(
+            &path,
+            &paint,
+            FillRule::EvenOdd,
+            Transform::identity(),
+            Some(&mask),
+        );
+```
+We get the final output:
+
+![piechart](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/5b3fada0-ccfe-4168-8f85-3c182e44a45b)
