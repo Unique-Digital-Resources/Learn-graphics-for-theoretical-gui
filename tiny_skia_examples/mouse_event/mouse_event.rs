@@ -27,11 +27,12 @@ use winit::event_loop::{ControlFlow, EventLoop};
 use winit::window::WindowBuilder;
 
 fn main() {
+    // Create event loop, window, surface and context
     let event_loop = EventLoop::new();
     let window = WindowBuilder::new().build(&event_loop).unwrap();
     let context = unsafe { Context::new(&window) }.unwrap();
     let mut surface = unsafe { Surface::new(&context, &window) }.unwrap();
-
+    // Set pixel's color variables
     let mut last_pixel = PremultipliedColorU8::from_rgba(0, 0, 0, 0);
     let mut _current_pixel = PremultipliedColorU8::from_rgba(0, 0, 0, 0);
 
@@ -40,12 +41,12 @@ fn main() {
                     (size.width, size.height)
                 };
     let mut pixmap = Pixmap::new(width, height).unwrap();
-
+    // Run event loop
     event_loop.run(move |event, _, control_flow| {
         *control_flow = ControlFlow::Wait;
 
         match event {
-            
+            // When window opened or changed its size, redraw its graphics content
             Event::RedrawRequested(window_id) if window_id == window.id() => {
                 let (width, height) = {
                     let size = window.inner_size();
@@ -58,7 +59,7 @@ fn main() {
                     )
                     .unwrap();
 
-
+                // Draw pixmap
                 pixmap = Pixmap::new(width, height).unwrap();
                 pixmap.fill(Color::WHITE);
                 
@@ -78,15 +79,7 @@ fn main() {
                     Transform::identity(),
                     None,
                 );
-        
-
-
-
-
-
-
-
-                
+                // Transfer every pixel from the pixmap to the visible buffer to show it in the window
                 let mut buffer = surface.buffer_mut().unwrap();
                 for index in 0..(width * height) as usize {
                     buffer[index] = pixmap.data()[index * 4 + 2] as u32
@@ -99,7 +92,10 @@ fn main() {
             
 
             Event::WindowEvent { event, .. } => match event {
+                // Close the software when window closed
                 WindowEvent::CloseRequested => control_flow.set_exit(),
+                // Track mouse cursor's position, and if color of pixel at the mouse position not the same last pixel's color; event will be triggered, 
+                // and print the new color 
                 WindowEvent::CursorMoved { position,device_id , modifiers } 
                     => {
                         let x = position.x as u32;
