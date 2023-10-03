@@ -20,12 +20,16 @@ First, we draw a complete circle that serves as the background or the complement
         Transform::identity(),
         None
     );
+
 ```
-![piechart_bg](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/77642f9b-9254-4e58-aed0-d108eac77e69)
+
+![piechart_bg](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/d0e7b011-a887-4ea5-994c-38ba1953d9c0)
 
 
 Now we draw the pie, by drawing a square and dividing it into 8 equal parts, each part has an angle at the point (x, y) measuring 45 degrees.
-![pie_chart_drawing_alogrithm_2](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/208a2a7f-6e77-4742-b105-4b99e0561b3d)
+
+![pie_chart_drawing_alogrithm_2](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/ec6994d6-9f00-4279-a252-3d3df3086984)
+
 
 A line will be drawn whose starting point is (x,y) and whose ending point is (last_point_x , last_point_y ).
 ```rust
@@ -148,7 +152,8 @@ if used_degree>=0.0 && used_degree<45.0 {
                 pb.line_to(x+r , last_point_y );
             }
 ```
-![pie_chart_drawing_alogrithm_3](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/6352a74b-9dfc-4a30-8956-26c2eede9a54)
+
+![pie_chart_drawing_alogrithm_3](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/4577df7e-a300-4e15-95e6-20cd4dc364bd)
 
 The variables are then assigned values ​​that are used to plot the next section
 ```
@@ -174,7 +179,8 @@ In this case:
                 pb.line_to(last_point_x , y+r );
             }
 ```
-![pie_chart_drawing_alogrithm_4](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/3491afd6-1cd0-4ba7-9f12-0ad840b0a8a3)
+
+![pie_chart_drawing_alogrithm_4](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/a6a2ea8f-6ceb-478c-a90e-41dc98af2a7f)
 
 The variables are then assigned values ​​that are used to plot the next section
 ```
@@ -183,7 +189,10 @@ last_point_x = new_point_x = x+r - (r * (degree-135.0)/45.0 ), last_point_y = ne
 
 And so on.
 We will end up with this form:
-![piechart_square](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/2250bd15-03db-48e1-8e60-9568c509784d)
+
+![piechart_square](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/68b78e58-f6c1-46c2-b4c1-d2d040cccde2)
+
+
 We see that there is a missing part because the sum of the data values ​​is less than the full value specified by the user. The back circle will appear as if it is the missing part.
 
 Finally, we draw another circle that will be used as a mask to cut the square and turn it into a circle:
@@ -211,7 +220,8 @@ let mut mpb = PathBuilder::new();
 ```
 We get the final output:
 
-![piechart](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/5b3fada0-ccfe-4168-8f85-3c182e44a45b)
+![piechart](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/2364428e-24af-4fc9-bd97-699f52d1b06f)
+
 
 
 ## Usefull resources:
