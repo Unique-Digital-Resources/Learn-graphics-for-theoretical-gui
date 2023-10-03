@@ -1,4 +1,5 @@
-![UDR_github_graphics_examples_banner](https://github.com/Unique-Digital-Resources/Examples-of-using-some-crates-for-rust-community/assets/144396669/661ac3d0-a9b6-40db-b26f-aed7fe7f2f9a)
+
+![UDR_github_graphics_examples_banner](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/eead490c-597d-4a14-9ae0-7754477b2ad8)
 
 # Learn graphics for theoretical gui with rust
 
