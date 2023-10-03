@@ -5,7 +5,7 @@ To draw a graph - which is used to represent data in x and y axis- we will use s
 
 We get the final output:
 
-![graph](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/1b2babd4-b408-4eb9-b778-ae5ce542f18b)
+[graph](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/1b2babd4-b408-4eb9-b778-ae5ce542f18b)
 
 
 ## Usefull resources:
