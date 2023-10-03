@@ -38,7 +38,7 @@ When writing an example, if you want to perform a pull request for it, you shoul
 - 4- It is preferable to display pictures showing the geometric relationship or the steps that were used in writing the file.
 - 5- It is also preferable, if possible, to include a README.md file to explain the example.
 - 6- You can write an example based on the algorithm/code from another example file in this project repository, mentioning that
-- 7- You can also write a copy of an example that already exists in this repository but with a different method/algorithm
 you used the algorithm/code from that file. However, if you wrote the example file based on one of the examples in the [graphics gallery](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/issues/1) or from other source, you must make sure that it is permissible to use it.
+- 7- You can also write a copy of an example that already exists in this repository but with a different method/algorithm
 
 You can also share graphical examples in the [graphics gallery](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/issues/1)
