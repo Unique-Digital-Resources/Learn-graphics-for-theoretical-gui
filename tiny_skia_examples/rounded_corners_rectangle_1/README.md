@@ -37,20 +37,24 @@ In the file rounded_corners_rectangle_1.rs:
     pb.close();
 ```
 The following image may explain how the code works:
-![rounded_corners_rectangle_alogrithm](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/9f764f7d-fa19-4e67-aa03-235d149ba353)
+
+![rounded_corners_rectangle_alogrithm](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/15489cac-e8b1-44e2-9bd4-0cd541873000)
 
 When we put the values ​​w=800, h=500, and r=60 in the function 
 ```rust 
 rounded_corners_rectangle_draw_1(x:f32,y:f32,w:f32,h:f32,mut r:f32) -> Path
 ```
 , we get the following form:
-![rounded_corners_rectangle_1_w800_h500_r60](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/e73cdcdf-540e-4652-82c7-1b390570b972)
-​​
+
+​​![rounded_corners_rectangle_1_w800_h500_r60](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/6958d8d4-d348-40f0-84fd-27bcacb003ce)
+
 w=800, h=500, and r=120:
-![rounded_corners_rectangle_1_w800_h500_r120](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/656e9355-edd8-4d2e-a7cf-4250a692a40d)
+![rounded_corners_rectangle_1_w800_h500_r120](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/4a6f7e08-aed2-43dc-a5f4-29d1f81dcb32)
+
 
 ​​w=h:
-![rounded_corners_rectangle_1_w_eq_h](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/54043142-1f9d-43e4-b85a-703b6398a460)
+![rounded_corners_rectangle_1_w_eq_h](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/9dc55e12-6399-4a3a-9def-12de661d28eb)
+
 
 ## Usefull resources:
 - https://www.desmos.com/calculator/qddv8ytxpf (Interactive cubic curves to understand how to work with them).
