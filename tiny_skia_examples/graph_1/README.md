@@ -1,7 +1,7 @@
 # Graph algorithm
 To draw a graph - which is used to represent data in x and y axis- we will use straight lines to do this with Tiny-Skia.
+![graph_alogrithm](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/c1d0506f-4096-440b-87c8-7e7140742a60)
 
-![graph_alogrithm](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/6b0f8a75-9ccd-49bf-8583-5bc7bd38a472)
 
 We get the final output:
 
