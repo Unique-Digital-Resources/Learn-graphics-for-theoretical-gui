@@ -14,7 +14,8 @@ This method can be used in GUI to activate an event, such as when the mouse curs
 Of course, there are other methods, such as the method that uses the position and area of ​​the shape to determine mathematically whether the event will be activated or not, but it may be complicated and inaccurate for non-rectangular shapes and irregular shapes (as far as I know).
 
 
-[mouse_event.webm](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/0ad38a78-0f3d-4cf5-b5cc-c994810b390c)
+[mouse_event.webm](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/f4a1e340-324d-426d-b8bc-e20383863609)
+
 
 
 ##  Usefull resources:
