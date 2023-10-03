@@ -8,7 +8,8 @@ After drawing shapes and put it a pixmap by tiny skia, we transfer every pixel f
 
 
 
-[draw_in_window.webm](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/de1bfb69-522d-41db-8660-e374a885454f)
+[draw_in_window.webm](https://github.com/Unique-Digital-Resources/Learn-graphics-for-theoretical-gui/assets/144396669/0be4df50-3ad2-4a21-840b-1540c1f0a746)
+
 
 ## Usefull resources:
 - https://docs.rs/tiny-skia/latest/tiny_skia/ (tiny-skia docs).
